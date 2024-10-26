@@ -1,0 +1,21 @@
+# Calcular estadísticas
+areas = [p.area() for p in paralelogramos]
+perimetros = [p.perimetro() for p in paralelogramos]
+
+promedio_areas = round(sum(areas) / len(areas), 1)
+promedio_perimetros = round(sum(perimetros) / len(perimetros), 1)
+mayor_area = max(areas)
+mayor_perimetro = max(perimetros)
+
+# Mostrar el reporte estadístico
+print("\nReporte estadístico:\n")
+print(f"Promedio de áreas: {promedio_areas}")
+print(f"Promedio de perímetros: {promedio_perimetros}")
+print(f"Mayor área calculada: {mayor_area}")
+print(f"Mayor perímetro calculado: {mayor_perimetro}\n")
+
+# Imprimir paralelogramos con área por encima del promedio
+print("Paralelogramos cuya área está por encima del promedio:\n")
+for p in paralelogramos:
+    if p.area() > promedio_areas:
+        print(p)
